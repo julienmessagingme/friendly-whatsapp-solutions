@@ -55,7 +55,7 @@ const HeroSection = () => {
                       alt="MairieMe Logo" 
                       className="h-16 w-auto" 
                     />
-                    <span className="font-display font-bold text-gray-900" style={{ fontSize: "calc(16px * 0.75)" }}>MairieMe</span>
+                    <span className="font-display font-bold text-gray-900" style={{ fontSize: "calc(32px * 0.75)" }}>MairieMe</span>
                   </div>
                   <h3 className="text-xl font-semibold mb-2">Interface WhatsApp MairieMe</h3>
                   <p className="text-gray-700">Visualisez ici l'interface de conversation entre la mairie et les citoyens</p>

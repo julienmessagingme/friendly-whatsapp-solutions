@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -38,7 +37,7 @@ const Navbar = () => {
             alt="MairieMe Logo" 
             className="h-10 w-auto" 
           />
-          <span className="font-display font-bold text-gray-900" style={{ fontSize: "calc(10px * 0.75)" }}>MairieMe</span>
+          <span className="font-display font-bold text-gray-900" style={{ fontSize: "calc(20px * 0.75)" }}>MairieMe</span>
         </div>
         
         {/* Desktop Navigation */}
