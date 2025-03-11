@@ -7,9 +7,13 @@ const Footer = () => {
       <div className="container px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="col-span-1 md:col-span-1">
-            <div className="flex items-center space-x-2 mb-6">
-              <img src="/lovable-uploads/6e4a6a9e-26a5-4390-995c-71c1a17940a7.png" alt="MairieMe Logo" className="w-8 h-8" />
-              <span className="font-display font-bold text-xl">MairieMe</span>
+            <div className="flex items-center space-x-3 mb-6">
+              <img 
+                src="/lovable-uploads/c5d9b402-10bb-4e02-bf19-6f563bda581c.png" 
+                alt="MairieMe Logo" 
+                className="h-12 w-auto" 
+              />
+              <span className="font-display font-bold" style={{ fontSize: "calc(12px * 0.75)" }}>MairieMe</span>
             </div>
             <p className="text-gray-400 mb-6 text-sm">
               La solution de communication moderne pour les mairies françaises, permettant d'interagir avec les citoyens via WhatsApp.

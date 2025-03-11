@@ -49,7 +49,14 @@ const HeroSection = () => {
             <div className="aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
               <div className="absolute inset-0 bg-gradient-to-br from-mairie-400/20 to-mairie-600/20 flex items-center justify-center">
                 <div className="glassmorphism p-8 rounded-xl max-w-md text-center">
-                  <img src="/lovable-uploads/6e4a6a9e-26a5-4390-995c-71c1a17940a7.png" alt="MairieMe Logo" className="w-12 h-12 mx-auto mb-4" />
+                  <div className="flex items-center justify-center space-x-3 mb-4">
+                    <img 
+                      src="/lovable-uploads/c5d9b402-10bb-4e02-bf19-6f563bda581c.png" 
+                      alt="MairieMe Logo" 
+                      className="h-16 w-auto" 
+                    />
+                    <span className="font-display font-bold text-gray-900" style={{ fontSize: "calc(16px * 0.75)" }}>MairieMe</span>
+                  </div>
                   <h3 className="text-xl font-semibold mb-2">Interface WhatsApp MairieMe</h3>
                   <p className="text-gray-700">Visualisez ici l'interface de conversation entre la mairie et les citoyens</p>
                 </div>
