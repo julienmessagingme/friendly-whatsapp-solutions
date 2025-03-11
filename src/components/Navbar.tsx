@@ -33,7 +33,7 @@ const Navbar = () => {
     )}>
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <img src="/logo.png" alt="MairieMe Logo" className="w-8 h-8" />
+          <img src="/lovable-uploads/6e4a6a9e-26a5-4390-995c-71c1a17940a7.png" alt="MairieMe Logo" className="w-8 h-8" />
           <span className="font-display font-bold text-xl text-gray-900">MairieMe</span>
         </div>
         
