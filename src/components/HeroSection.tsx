@@ -1,6 +1,5 @@
 
 import { Button } from '@/components/ui/button';
-import { MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const HeroSection = () => {
@@ -50,8 +49,8 @@ const HeroSection = () => {
             <div className="aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
               <div className="absolute inset-0 bg-gradient-to-br from-mairie-400/20 to-mairie-600/20 flex items-center justify-center">
                 <div className="glassmorphism p-8 rounded-xl max-w-md text-center">
-                  <MessageCircle className="w-12 h-12 mx-auto mb-4 text-mairie-600" />
-                  <h3 className="text-xl font-semibold mb-2">Interface WhatsApp MairieChat</h3>
+                  <img src="/logo.png" alt="MairieMe Logo" className="w-12 h-12 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold mb-2">Interface WhatsApp MairieMe</h3>
                   <p className="text-gray-700">Visualisez ici l'interface de conversation entre la mairie et les citoyens</p>
                 </div>
               </div>

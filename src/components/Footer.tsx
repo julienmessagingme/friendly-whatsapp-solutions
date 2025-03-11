@@ -1,6 +1,4 @@
 
-import { MessageCircle } from 'lucide-react';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
@@ -10,8 +8,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <MessageCircle className="w-8 h-8 text-mairie-400" />
-              <span className="font-display font-bold text-xl">MairieChat</span>
+              <img src="/logo.png" alt="MairieMe Logo" className="w-8 h-8" />
+              <span className="font-display font-bold text-xl">MairieMe</span>
             </div>
             <p className="text-gray-400 mb-6 text-sm">
               La solution de communication moderne pour les mairies françaises, permettant d'interagir avec les citoyens via WhatsApp.
@@ -76,7 +74,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 text-sm mb-4 md:mb-0">
-            &copy; {currentYear} MairieChat. Tous droits réservés.
+            &copy; {currentYear} MairieMe. Tous droits réservés.
           </div>
           <div className="flex space-x-6 text-sm text-gray-400">
             <a href="#" className="hover:text-white transition-colors">Politique de confidentialité</a>

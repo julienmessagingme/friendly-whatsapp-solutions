@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { MessageCircle, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Navbar = () => {
@@ -33,8 +33,8 @@ const Navbar = () => {
     )}>
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <MessageCircle className="w-8 h-8 text-mairie-600" />
-          <span className="font-display font-bold text-xl text-gray-900">MairieChat</span>
+          <img src="/logo.png" alt="MairieMe Logo" className="w-8 h-8" />
+          <span className="font-display font-bold text-xl text-gray-900">MairieMe</span>
         </div>
         
         {/* Desktop Navigation */}
