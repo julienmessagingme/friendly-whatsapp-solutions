@@ -117,13 +117,14 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="relative mx-auto max-w-4xl"
           >
-            <div className="aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
+            <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
               <div className="absolute inset-0 bg-gradient-to-br from-mairie-400/30 to-mairie-600/30 p-6">
-                <div className="max-w-4xl mx-auto grid grid-cols-2 gap-16">
+                <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 place-items-center h-full">
                   <div className="phone-frame">
                     <WhatsAppConversation messages={urbanismConversation} />
                   </div>
-                  <div className="phone-frame">
+                  {/* Only show the second phone on medium screens and larger */}
+                  <div className="phone-frame hidden md:block">
                     <WhatsAppConversation messages={schoolConversation} />
                   </div>
                 </div>
