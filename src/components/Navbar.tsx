@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -37,14 +38,13 @@ const Navbar = () => {
             alt="MairieMe Logo" 
             className="h-10 w-auto" 
           />
-          <span className="font-display font-bold text-gray-900" style={{ fontSize: "calc(20px * 0.75)" }}>MairieMe</span>
+          <span className="font-display font-bold text-gray-900" style={{ fontSize: "calc(10px * 1.5)" }}>MairieMe</span>
         </div>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <a href="#fonctionnalites" className="text-gray-700 hover:text-mairie-600 transition-colors">Fonctionnalités</a>
           <a href="#avantages" className="text-gray-700 hover:text-mairie-600 transition-colors">Avantages</a>
-          <a href="#temoignages" className="text-gray-700 hover:text-mairie-600 transition-colors">Témoignages</a>
           <a href="#tarifs" className="text-gray-700 hover:text-mairie-600 transition-colors">Tarifs</a>
         </nav>
         
@@ -70,7 +70,6 @@ const Navbar = () => {
         <div className="container mx-auto py-4 px-4 flex flex-col space-y-4">
           <a href="#fonctionnalites" className="text-gray-700 hover:text-mairie-600 py-2 transition-colors" onClick={toggleMobileMenu}>Fonctionnalités</a>
           <a href="#avantages" className="text-gray-700 hover:text-mairie-600 py-2 transition-colors" onClick={toggleMobileMenu}>Avantages</a>
-          <a href="#temoignages" className="text-gray-700 hover:text-mairie-600 py-2 transition-colors" onClick={toggleMobileMenu}>Témoignages</a>
           <a href="#tarifs" className="text-gray-700 hover:text-mairie-600 py-2 transition-colors" onClick={toggleMobileMenu}>Tarifs</a>
           <div className="flex flex-col space-y-3 pt-4 border-t border-gray-200">
             <Button variant="outline" className="w-full justify-center">Se connecter</Button>

@@ -48,17 +48,21 @@ const HeroSection = () => {
           >
             <div className="aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
               <div className="absolute inset-0 bg-gradient-to-br from-mairie-400/20 to-mairie-600/20 flex items-center justify-center">
-                <div className="glassmorphism p-8 rounded-xl max-w-md text-center">
-                  <div className="flex items-center justify-center space-x-3 mb-4">
+                <div className="bg-white p-6 rounded-xl max-w-3xl w-full flex flex-col sm:flex-row justify-between items-center">
+                  <div className="w-full sm:w-1/2 p-2">
                     <img 
-                      src="/lovable-uploads/c5d9b402-10bb-4e02-bf19-6f563bda581c.png" 
-                      alt="MairieMe Logo" 
-                      className="h-16 w-auto" 
+                      src="/lovable-uploads/57e576df-0be9-4748-803d-02cf7cbe34bb.png"
+                      alt="WhatsApp Conversation Example 1" 
+                      className="w-full h-auto rounded-lg shadow-md" 
                     />
-                    <span className="font-display font-bold text-gray-900" style={{ fontSize: "calc(32px * 0.75)" }}>MairieMe</span>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">Interface WhatsApp MairieMe</h3>
-                  <p className="text-gray-700">Visualisez ici l'interface de conversation entre la mairie et les citoyens</p>
+                  <div className="w-full sm:w-1/2 p-2 mt-4 sm:mt-0">
+                    <img 
+                      src="/lovable-uploads/cd3e714c-b2f0-4ec9-ae20-9641543c0814.png"
+                      alt="WhatsApp Conversation Example 2" 
+                      className="w-full h-auto rounded-lg shadow-md" 
+                    />
+                  </div>
                 </div>
               </div>
             </div>

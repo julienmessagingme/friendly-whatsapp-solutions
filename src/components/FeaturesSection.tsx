@@ -40,19 +40,19 @@ const FeaturesSection = () => {
     {
       icon: <MessageSquare size={24} />,
       title: "Conversations automatisées",
-      description: "Répondez automatiquement aux demandes courantes des citoyens grâce à notre système de chatbot intelligent.",
+      description: "Répondez automatiquement à toutes les demandes de vos citoyens grâce à notre IA intégrée aux données de l'état et de la commune.",
       delay: 0.1
     },
     {
       icon: <BarChart3 size={24} />,
       title: "Analyse de données",
-      description: "Obtenez des insights précieux sur les préoccupations de vos citoyens grâce à des tableaux de bord analytiques.",
+      description: "Obtenez des informations précises sur les préoccupations et les souhaits de vos citoyens grâce à des tableaux de bord analytiques.",
       delay: 0.2
     },
     {
       icon: <Clock size={24} />,
       title: "Disponibilité 24/7",
-      description: "Offrez un service client disponible à tout moment, même en dehors des heures d'ouverture de la mairie.",
+      description: "Offrez un service disponible à tout moment, même en dehors des horaires de la mairie.",
       delay: 0.3
     },
     {
@@ -69,8 +69,8 @@ const FeaturesSection = () => {
     },
     {
       icon: <Users size={24} />,
-      title: "Gestion multi-agents",
-      description: "Permettez à plusieurs agents municipaux de gérer les conversations simultanément avec des rôles personnalisés.",
+      title: "Soyez en proximité",
+      description: "Prenez RDV avec vos citoyens ou parlez-leur directement dans notre interface de communication.",
       delay: 0.3
     }
   ];

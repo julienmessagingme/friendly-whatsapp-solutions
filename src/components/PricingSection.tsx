@@ -13,8 +13,8 @@ const PricingSection = () => {
     {
       name: "Essentiel",
       description: "Idéal pour les petites communes débutant avec WhatsApp",
-      monthlyPrice: 149,
-      annualPrice: 129,
+      monthlyPrice: 200,
+      annualPrice: 170,
       features: [
         "1 compte administrateur",
         "Jusqu'à 3 agents simultanés",
@@ -27,22 +27,23 @@ const PricingSection = () => {
     {
       name: "Premium",
       description: "Solution complète pour les communes moyennes",
-      monthlyPrice: 299,
-      annualPrice: 249,
+      monthlyPrice: 400,
+      annualPrice: 340,
       features: [
         "3 comptes administrateurs",
         "Jusqu'à 8 agents simultanés",
         "2000 conversations par mois",
         "Réponses automatisées avancées",
-        "Intégration avec le site web de la mairie",
+        "Intégration IA des données du site web de la mairie",
+        "1 mise à jour de la base de connaissance/informations mairie par mois",
         "Analyses et rapports détaillés",
         "Support prioritaire"
       ],
       highlighted: true
     },
     {
-      name: "Entreprise",
-      description: "Pour les grandes villes avec des besoins spécifiques",
+      name: "Sur Mesure",
+      description: "Pour les grandes villes ou intercommunalités avec des besoins spécifiques",
       monthlyPrice: null,
       annualPrice: null,
       features: [
