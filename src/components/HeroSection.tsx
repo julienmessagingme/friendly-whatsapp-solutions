@@ -118,12 +118,12 @@ const HeroSection = () => {
             className="relative mx-auto max-w-4xl"
           >
             <div className="aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
-              <div className="absolute inset-0 bg-gradient-to-br from-mairie-400/20 to-mairie-600/20 p-6">
-                <div className="max-w-4xl mx-auto grid grid-cols-2 gap-10">
-                  <div className="device-frame scale-70 origin-center">
+              <div className="absolute inset-0 bg-gradient-to-br from-mairie-400/30 to-mairie-600/30 p-6">
+                <div className="max-w-4xl mx-auto grid grid-cols-2 gap-16">
+                  <div className="phone-frame">
                     <WhatsAppConversation messages={urbanismConversation} />
                   </div>
-                  <div className="device-frame scale-70 origin-center">
+                  <div className="phone-frame">
                     <WhatsAppConversation messages={schoolConversation} />
                   </div>
                 </div>

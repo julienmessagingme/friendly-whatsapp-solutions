@@ -124,11 +124,10 @@
     @apply bg-white p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100;
   }
 
-  .device-frame {
-    @apply relative rounded-[2.5rem] border-[14px] border-gray-900 overflow-hidden shadow-xl transform;
-    &:before {
-      content: '';
-      @apply absolute top-0 inset-x-1/4 h-6 bg-gray-900 rounded-b-xl;
-    }
+  .phone-frame {
+    @apply relative rounded-[2rem] border-[10px] border-gray-900 overflow-hidden shadow-xl;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
   }
 }

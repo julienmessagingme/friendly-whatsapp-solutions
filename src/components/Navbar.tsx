@@ -38,7 +38,7 @@ const Navbar = () => {
             alt="MairieMe Logo" 
             className="h-10 w-auto" 
           />
-          <span className="font-display font-bold text-gray-900" style={{ fontSize: "calc(10px * 1.5)" }}>MairieMe</span>
+          <span className="font-display font-bold text-gray-900 text-2xl md:text-3xl">MairieMe</span>
         </div>
         
         {/* Desktop Navigation */}
