@@ -1,5 +1,6 @@
 
 import { motion } from 'framer-motion';
+import { Shield } from 'lucide-react';
 
 interface Message {
   sender: 'city' | 'citizen';
@@ -14,10 +15,15 @@ interface WhatsAppConversationProps {
 
 const WhatsAppConversation = ({ messages, className }: WhatsAppConversationProps) => {
   return (
-    <div className={`bg-[#e5ddd5] rounded-lg p-4 h-[600px] overflow-y-auto ${className}`}>
-      <div className="bg-[#128C7E] text-white p-3 rounded-t-lg -mx-4 -mt-4 mb-4">
-        <div className="font-semibold">Mairie de Ludon sur Oise</div>
-        <div className="text-sm opacity-80">En ligne</div>
+    <div className={`bg-[#e5ddd5] rounded-lg p-4 h-[420px] overflow-y-auto ${className}`}>
+      <div className="bg-[#128C7E] text-white p-3 rounded-t-lg -mx-4 -mt-4 mb-4 flex items-center">
+        <div className="bg-white/10 rounded-full p-1.5 mr-2">
+          <Shield size={18} className="text-white" />
+        </div>
+        <div>
+          <div className="font-semibold">Mairie de Ludon sur Oise</div>
+          <div className="text-sm opacity-80">En ligne</div>
+        </div>
       </div>
       <div className="space-y-3">
         {messages.map((message, index) => (

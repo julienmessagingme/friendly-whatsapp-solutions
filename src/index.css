@@ -125,7 +125,7 @@
   }
 
   .device-frame {
-    @apply relative rounded-[2.5rem] border-[14px] border-gray-900 overflow-hidden shadow-xl;
+    @apply relative rounded-[2.5rem] border-[14px] border-gray-900 overflow-hidden shadow-xl transform;
     &:before {
       content: '';
       @apply absolute top-0 inset-x-1/4 h-6 bg-gray-900 rounded-b-xl;

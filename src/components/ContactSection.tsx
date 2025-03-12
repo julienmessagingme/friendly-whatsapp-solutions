@@ -8,7 +8,8 @@ import {
   MessageSquare, 
   Phone, 
   Clock, 
-  Check
+  Check,
+  MessageCircle
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -50,7 +51,7 @@ const ContactSection = () => {
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-semibold mb-1">Email</h4>
-                  <p className="text-gray-600">contact@mairiechat.fr</p>
+                  <p className="text-gray-600">julien@messagingme.fr</p>
                 </div>
               </div>
               
@@ -62,7 +63,7 @@ const ContactSection = () => {
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-semibold mb-1">Téléphone</h4>
-                  <p className="text-gray-600">01 23 45 67 89</p>
+                  <p className="text-gray-600">06.33.92.15.77</p>
                 </div>
               </div>
               
@@ -88,6 +89,18 @@ const ContactSection = () => {
                   <h4 className="text-lg font-semibold mb-1">Démo gratuite</h4>
                   <p className="text-gray-600">Réservez une démo personnalisée avec l'un de nos experts</p>
                 </div>
+              </div>
+              
+              <div className="mt-8">
+                <a 
+                  href="https://wa.me/33633921577" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#25D366] text-white font-medium rounded-lg hover:bg-[#128C7E] transition-colors"
+                >
+                  <MessageCircle size={20} />
+                  Nous contacter sur WhatsApp
+                </a>
               </div>
             </div>
           </motion.div>
