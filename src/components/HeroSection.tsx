@@ -1,8 +1,79 @@
 
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
+import WhatsAppConversation from './WhatsAppConversation';
 
 const HeroSection = () => {
+  const urbanismConversation = [
+    {
+      sender: 'city',
+      content: "Bonjour et bienvenue sur le compte WhatsApp officiel de votre mairie de Ludon sur Oise ! 🏫"
+    },
+    {
+      sender: 'city',
+      content: "Ici vous posez toutes vos questions et vous pourrez aussi être mis en relation avec nos services ! 🚀"
+    },
+    {
+      sender: 'city',
+      content: "",
+      image: "/lovable-uploads/d590a352-d4dd-45c7-aa69-43e532d2f013.png"
+    },
+    {
+      sender: 'citizen',
+      content: "Bonjour, je voudrais rajouter un étage à ma maison mais je ne sais pas comment trouver les règles d'urbanisme possibles ?"
+    },
+    {
+      sender: 'city',
+      content: "Pour savoir si vous pouvez rajouter un étage à votre maison vous devez :\n1) consulter le PLU à l'adresse suivante https://www.ludonsuroise.fr/urbanisme/PlanLocalUrbanismev23\n2) demander une étude de votre permis de construire sur notre plate forme dédiée aux demandes d'urbanisme\n3) Demander l'autorisation préalable de votre copropriété le cas échéant."
+    },
+    {
+      sender: 'city',
+      content: "Voulez vous télécharger le plan de zonage pour savoir dans quelle zone se situe votre bien ?"
+    },
+    {
+      sender: 'citizen',
+      content: "Oui"
+    },
+    {
+      sender: 'city',
+      content: "",
+      image: "/lovable-uploads/3e76276a-ee20-403e-8fa3-500e693d0ad1.png"
+    }
+  ];
+
+  const schoolConversation = [
+    {
+      sender: 'citizen',
+      content: "Bonjour, je suis nouvel arrivant dans la ville et je voudrais inscrire mes enfants à l'école maternelle pour la prochaine rentrée. Comment puis je faire ?"
+    },
+    {
+      sender: 'city',
+      content: <div>
+        Bonjour, pour s'inscrire à l'école maternelle, il faut que vous nous retourniez avant le 15 mai le{' '}
+        <a href="#" className="text-blue-600 underline">remplir le fichier d'inscription</a>
+      </div>
+    },
+    {
+      sender: 'citizen',
+      content: "Je souhaiterais prendre RDV avec le service \"petite enfance\" pour éventuellement venir faire une visite de l'école. Est ce possible ?"
+    },
+    {
+      sender: 'city',
+      content: <div>
+        Oui, vous pouvez prendre RDV en cliquant sur le lien suivant. L'école se situe rue de la République, près de la mairie.{' '}
+        <a href="#" className="text-blue-600 underline">Prendre RDV à la mairie</a>
+      </div>
+    },
+    {
+      sender: 'citizen',
+      content: "J'ai une question différente... existe t il une association qui organise de la baby Gym dans la commune ?"
+    },
+    {
+      sender: 'city',
+      content: "Oui, il s'agit de l'association Baby & Sport qui propose plein d'activités d'éveil au sport..\nVous pouvez les contacter au 06.12.34.56.87 ou leur envoyer un mail à babyandsport@gmail.com"
+    }
+  ];
+
   return (
     <section className="relative pt-28 pb-20 md:pt-36 md:pb-32 overflow-hidden">
       {/* Background Elements */}
@@ -47,21 +118,13 @@ const HeroSection = () => {
             className="relative mx-auto max-w-4xl"
           >
             <div className="aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
-              <div className="absolute inset-0 bg-gradient-to-br from-mairie-400/20 to-mairie-600/20 flex items-center justify-center">
-                <div className="bg-white p-6 rounded-xl max-w-3xl w-full flex flex-col sm:flex-row justify-between items-center">
-                  <div className="w-full sm:w-1/2 p-2">
-                    <img 
-                      src="/lovable-uploads/57e576df-0be9-4748-803d-02cf7cbe34bb.png"
-                      alt="WhatsApp Conversation Example 1" 
-                      className="w-full h-auto rounded-lg shadow-md" 
-                    />
+              <div className="absolute inset-0 bg-gradient-to-br from-mairie-400/20 to-mairie-600/20 p-6">
+                <div className="max-w-4xl mx-auto grid grid-cols-2 gap-4">
+                  <div className="device-frame">
+                    <WhatsAppConversation messages={urbanismConversation} />
                   </div>
-                  <div className="w-full sm:w-1/2 p-2 mt-4 sm:mt-0">
-                    <img 
-                      src="/lovable-uploads/cd3e714c-b2f0-4ec9-ae20-9641543c0814.png"
-                      alt="WhatsApp Conversation Example 2" 
-                      className="w-full h-auto rounded-lg shadow-md" 
-                    />
+                  <div className="device-frame">
+                    <WhatsAppConversation messages={schoolConversation} />
                   </div>
                 </div>
               </div>
