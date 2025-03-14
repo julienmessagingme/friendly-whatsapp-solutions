@@ -130,7 +130,7 @@
     /* Ensuring 9:20 aspect ratio for 6.5" phone */
     aspect-ratio: 9/20;
     width: 100%;
-    max-width: 235px; /* Increased by 20% from the previous 196px */
+    max-width: 252px; /* Increased by 7% from 235px */
     margin: 0 auto;
   }
   
@@ -142,10 +142,10 @@
   }
   
   .animate-float {
-    animation: float 6s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite; /* Faster animation: changed from 6s to 3s */
   }
   
   .animate-pulse {
-    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; /* Faster animation: changed from 3s to 2s */
   }
 }

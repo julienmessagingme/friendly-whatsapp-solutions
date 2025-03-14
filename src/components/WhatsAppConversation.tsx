@@ -1,28 +1,35 @@
 
 import { motion } from 'framer-motion';
-import { Shield } from 'lucide-react';
+import { Shield, CheckCheck } from 'lucide-react';
 
 interface Message {
   sender: 'city' | 'citizen';
   content: string | React.ReactNode;
   image?: string;
+  isRead?: boolean;
 }
 
 interface WhatsAppConversationProps {
   messages: Message[];
   className?: string;
+  verified?: boolean;
 }
 
-const WhatsAppConversation = ({ messages, className }: WhatsAppConversationProps) => {
+const WhatsAppConversation = ({ messages, className, verified = false }: WhatsAppConversationProps) => {
   return (
     <div className={`bg-[#e5ddd5] rounded-lg p-1 h-full overflow-y-auto ${className}`}>
       <div className="bg-[#128C7E] text-white p-1 rounded-t-lg -mx-1 -mt-1 mb-1 flex items-center">
         <div className="bg-white/10 rounded-full p-0.5 mr-1">
           <Shield size={10} className="text-white" />
         </div>
-        <div>
+        <div className="flex items-center">
           <div className="font-semibold text-[8px] sm:text-[10px]">Mairie de Ludon sur Oise</div>
-          <div className="text-[6px] sm:text-[8px] opacity-80">En ligne</div>
+          {verified && (
+            <div className="ml-1 bg-blue-500 rounded-full flex items-center justify-center" style={{ width: '8px', height: '8px' }}>
+              <Shield size={5} className="text-white" />
+            </div>
+          )}
+          <div className="text-[6px] sm:text-[8px] opacity-80 ml-1">En ligne</div>
         </div>
       </div>
       <div className="space-y-1">
@@ -48,6 +55,11 @@ const WhatsAppConversation = ({ messages, className }: WhatsAppConversationProps
               )}
               {message.image && (
                 <img src={message.image} alt="Conversation attachment" className="mt-1 rounded-lg w-full" />
+              )}
+              {message.sender === 'citizen' && message.isRead && (
+                <div className="flex justify-end mt-0.5">
+                  <CheckCheck size={8} className="text-blue-500" />
+                </div>
               )}
             </div>
           </motion.div>
