@@ -93,7 +93,7 @@ const HeroSection = () => {
             <div className="inline-block mb-4 px-3 py-1 bg-mairie-50 text-mairie-700 rounded-full text-sm font-medium">
               Solution WhatsApp pour les collectivités
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-gray-900 tracking-tight mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-gray-900 tracking-tight mb-6">
               Transformez la communication <br className="hidden sm:block" />
               <span className="text-mairie-600">avec vos citoyens</span>
             </h1>
@@ -101,7 +101,7 @@ const HeroSection = () => {
               Plateforme conversationnelle qui permet aux mairies d'interagir avec leurs citoyens sur WhatsApp de manière simple, efficace et sécurisée.
             </p>
             <div className="flex justify-center">
-              <Button size="lg" variant="outline" className="btn-secondary">
+              <Button size="lg" variant="outline" className="btn-secondary mb-10 md:mb-16">
                 Demander une démo
               </Button>
             </div>
@@ -113,9 +113,9 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="relative mx-auto max-w-4xl"
           >
-            <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-gray-200 bg-gradient-to-br from-mairie-400/30 to-mairie-600/30 p-8 md:p-12">
+            <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-gray-200 bg-gradient-to-br from-mairie-400/30 to-mairie-600/30 p-4 sm:p-8 md:p-12">
               <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 place-items-center h-full">
-                <div className="phone-frame" style={{ maxWidth: '196px' }}> {/* Reduced by 30% from 280px */}
+                <div className="phone-frame w-full max-w-[176px] xs:max-w-[196px]"> {/* Made responsive for very small screens */}
                   <WhatsAppConversation 
                     messages={urbanismConversation} 
                     className="text-xs" // Reduced font size

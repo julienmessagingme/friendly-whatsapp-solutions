@@ -16,9 +16,33 @@ import { motion } from 'framer-motion';
 const ContactSection = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Simulate form submission
+    
+    // Get form data
+    const formData = new FormData(e.currentTarget);
+    const firstName = formData.get('firstName');
+    const lastName = formData.get('lastName');
+    const email = formData.get('email');
+    const mairie = formData.get('mairie');
+    const message = formData.get('message');
+    
+    // Create mailto link
+    const subject = encodeURIComponent(`Demande de contact - ${firstName} ${lastName} - ${mairie}`);
+    const body = encodeURIComponent(`
+Prénom: ${firstName}
+Nom: ${lastName}
+Email: ${email}
+Mairie: ${mairie}
+
+Message:
+${message}
+    `);
+    
+    // Open email client
+    window.location.href = `mailto:julien@messagingme.fr?subject=${subject}&body=${body}`;
+    
+    // Show success message
     setTimeout(() => {
       setIsSubmitted(true);
     }, 500);
@@ -93,7 +117,7 @@ const ContactSection = () => {
               
               <div className="mt-8">
                 <a 
-                  href="https://wa.me/33633921577" 
+                  href="https://wa.link/lbiqqu" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="inline-flex items-center gap-2 px-6 py-3 bg-[#25D366] text-white font-medium rounded-lg hover:bg-[#128C7E] transition-colors"
@@ -121,6 +145,7 @@ const ContactSection = () => {
                       </label>
                       <Input 
                         id="firstName" 
+                        name="firstName"
                         placeholder="Votre prénom" 
                         required 
                         className="rounded-lg"
@@ -132,6 +157,7 @@ const ContactSection = () => {
                       </label>
                       <Input 
                         id="lastName" 
+                        name="lastName"
                         placeholder="Votre nom" 
                         required 
                         className="rounded-lg"
@@ -145,6 +171,7 @@ const ContactSection = () => {
                     </label>
                     <Input 
                       id="email" 
+                      name="email"
                       type="email" 
                       placeholder="votre@email.fr" 
                       required 
@@ -158,6 +185,7 @@ const ContactSection = () => {
                     </label>
                     <Input 
                       id="mairie" 
+                      name="mairie"
                       placeholder="Mairie de..." 
                       required 
                       className="rounded-lg"
@@ -170,6 +198,7 @@ const ContactSection = () => {
                     </label>
                     <Textarea 
                       id="message" 
+                      name="message"
                       placeholder="Comment pouvons-nous vous aider ?" 
                       rows={4} 
                       className="rounded-lg"

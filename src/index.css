@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
@@ -83,7 +84,7 @@
   }
   
   h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl;
+    @apply text-3xl sm:text-4xl md:text-5xl;
   }
   
   h2 {
@@ -125,8 +126,8 @@
   }
 
   .phone-frame {
-    @apply relative rounded-[1.5rem] border-[8px] border-gray-900 overflow-hidden shadow-xl;
-    /* Standard 6.5" phone has roughly a 20:9 aspect ratio */
+    @apply relative rounded-[1.5rem] border-[6px] border-gray-900 overflow-hidden shadow-xl;
+    /* Ensuring 9:20 aspect ratio for 6.5" phone */
     aspect-ratio: 9/20;
     width: 100%;
     max-width: 196px; /* 30% smaller than original 280px */

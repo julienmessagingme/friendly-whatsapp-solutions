@@ -25,6 +25,17 @@ export const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  // Scroll to contact section
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+      if (isMobileMenuOpen) {
+        toggleMobileMenu();
+      }
+    }
+  };
+
   return (
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
@@ -52,8 +63,7 @@ export const Navbar = () => {
         </nav>
         
         <div className="hidden md:flex items-center space-x-4">
-          <Button variant="outline" className="hover:text-mairie-600 border-gray-200">Se connecter</Button>
-          <Button className="bg-mairie-600 hover:bg-mairie-700 text-white">Essai gratuit</Button>
+          <Button variant="outline" className="hover:text-mairie-600 border-gray-200" onClick={scrollToContact}>Demander une démo</Button>
         </div>
         
         {/* Mobile Menu Button */}
@@ -75,8 +85,12 @@ export const Navbar = () => {
           <a href="#avantages" className="text-gray-700 hover:text-mairie-600 py-2 transition-colors" onClick={toggleMobileMenu}>Avantages</a>
           <a href="#tarifs" className="text-gray-700 hover:text-mairie-600 py-2 transition-colors" onClick={toggleMobileMenu}>Tarifs</a>
           <div className="flex flex-col space-y-3 pt-4 border-t border-gray-200">
-            <Button variant="outline" className="w-full justify-center">Se connecter</Button>
-            <Button className="w-full justify-center bg-mairie-600 hover:bg-mairie-700">Essai gratuit</Button>
+            <Button 
+              className="w-full justify-center bg-mairie-600 hover:bg-mairie-700" 
+              onClick={scrollToContact}
+            >
+              Demander une démo
+            </Button>
           </div>
         </div>
       </div>
