@@ -1,3 +1,4 @@
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
@@ -48,25 +49,22 @@ const Footer = () => {
               <li><a href="#avantages" className="hover:text-white transition-colors">Avantages</a></li>
               <li><a href="#temoignages" className="hover:text-white transition-colors">Témoignages</a></li>
               <li><a href="#tarifs" className="hover:text-white transition-colors">Tarifs</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Sécurité</a></li>
             </ul>
           </div>
           
           <div>
             <h3 className="font-semibold text-lg mb-4">Ressources</h3>
             <ul className="space-y-3 text-gray-400 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
+              <li><a href="https://www.messagingme.fr/articles/" className="hover:text-white transition-colors">Blog</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Centre d'aide</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Guides d'utilisation</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">API</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Statut</a></li>
             </ul>
           </div>
           
           <div>
             <h3 className="font-semibold text-lg mb-4">Entreprise</h3>
             <ul className="space-y-3 text-gray-400 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors">À propos</a></li>
+              <li><a href="https://www.messagingme.fr/a-propos/" className="hover:text-white transition-colors">À propos</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Carrières</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Presse</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Partenaires</a></li>
@@ -80,9 +78,9 @@ const Footer = () => {
             &copy; {currentYear} MairieMe. Tous droits réservés.
           </div>
           <div className="flex space-x-6 text-sm text-gray-400">
-            <a href="#" className="hover:text-white transition-colors">Politique de confidentialité</a>
-            <a href="#" className="hover:text-white transition-colors">Conditions d'utilisation</a>
-            <a href="#" className="hover:text-white transition-colors">Mentions légales</a>
+            <a href="/politique-de-confidentialite" className="hover:text-white transition-colors">Politique de confidentialité</a>
+            <a href="/politique-des-cookies" className="hover:text-white transition-colors">Politique des cookies</a>
+            <a href="/mentions-legales" className="hover:text-white transition-colors">Mentions légales</a>
           </div>
         </div>
       </div>

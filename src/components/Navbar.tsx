@@ -3,8 +3,9 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -33,12 +34,14 @@ const Navbar = () => {
     )}>
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-3">
-          <img 
-            src="/lovable-uploads/c5d9b402-10bb-4e02-bf19-6f563bda581c.png" 
-            alt="MairieMe Logo" 
-            className="h-10 w-auto" 
-          />
-          <span className="font-display font-bold text-gray-900 text-2xl md:text-3xl">MairieMe</span>
+          <Link to="/">
+            <img 
+              src="/lovable-uploads/c5d9b402-10bb-4e02-bf19-6f563bda581c.png" 
+              alt="MairieMe Logo" 
+              className="h-10 w-auto" 
+            />
+          </Link>
+          <Link to="/" className="font-display font-bold text-gray-900 text-2xl md:text-3xl">MairieMe</Link>
         </div>
         
         {/* Desktop Navigation */}
