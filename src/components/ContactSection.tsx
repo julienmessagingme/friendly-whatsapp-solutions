@@ -39,7 +39,7 @@ Message:
 ${message}
     `);
     
-    // Open email client
+    // Open email client with the specified email address
     window.location.href = `mailto:julien@messagingme.fr?subject=${subject}&body=${body}`;
     
     // Show success message

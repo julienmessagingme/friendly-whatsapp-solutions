@@ -74,6 +74,14 @@ const HeroSection = () => {
     }
   ];
 
+  // Function to scroll to contact section
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative pt-28 pb-20 md:pt-36 md:pb-32 overflow-hidden">
       {/* Background Elements */}
@@ -93,7 +101,7 @@ const HeroSection = () => {
             <div className="inline-block mb-4 px-3 py-1 bg-mairie-50 text-mairie-700 rounded-full text-sm font-medium">
               Solution WhatsApp pour les collectivités
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-gray-900 tracking-tight mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-display font-bold text-gray-900 tracking-tight mb-6">
               Transformez la communication <br className="hidden sm:block" />
               <span className="text-mairie-600">avec vos citoyens</span>
             </h1>
@@ -101,7 +109,12 @@ const HeroSection = () => {
               Plateforme conversationnelle qui permet aux mairies d'interagir avec leurs citoyens sur WhatsApp de manière simple, efficace et sécurisée.
             </p>
             <div className="flex justify-center">
-              <Button size="lg" variant="outline" className="btn-secondary mb-10 md:mb-16">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="btn-secondary mb-16 md:mb-20"
+                onClick={scrollToContact}
+              >
                 Demander une démo
               </Button>
             </div>
@@ -113,29 +126,29 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="relative mx-auto max-w-4xl"
           >
-            <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-gray-200 bg-gradient-to-br from-mairie-400/30 to-mairie-600/30 p-4 sm:p-8 md:p-12">
-              <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 place-items-center h-full">
-                <div className="phone-frame w-full max-w-[176px] xs:max-w-[196px]"> {/* Made responsive for very small screens */}
+            <div className="aspect-auto sm:aspect-video rounded-2xl overflow-hidden shadow-2xl border border-gray-200 bg-gradient-to-br from-mairie-400/30 to-mairie-600/30 p-4 sm:p-8 md:p-12">
+              <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 place-items-center min-h-[350px] sm:min-h-0">
+                <div className="phone-frame w-full max-w-[140px] xs:max-w-[176px] sm:max-w-[235px]"> 
                   <WhatsAppConversation 
                     messages={urbanismConversation} 
-                    className="text-xs" // Reduced font size
+                    className="text-xs" 
                   />
                 </div>
                 {/* Only show the second phone on medium screens and larger */}
-                <div className="phone-frame hidden md:block" style={{ maxWidth: '196px' }}> {/* Reduced by 30% from 280px */}
+                <div className="phone-frame hidden md:block" style={{ maxWidth: '235px' }}> 
                   <WhatsAppConversation 
                     messages={schoolConversation} 
-                    className="text-xs" // Reduced font size
+                    className="text-xs" 
                   />
                 </div>
               </div>
             </div>
             
-            {/* Animation elements */}
-            <div className="absolute -right-16 top-1/4 w-32 h-32 bg-mairie-50 rounded-full animate-float opacity-80" />
-            <div className="absolute -left-12 bottom-1/4 w-24 h-24 bg-mairie-100 rounded-full animate-float opacity-80" style={{ animationDelay: '1s' }} />
-            <div className="absolute left-1/4 top-1/3 w-16 h-16 bg-mairie-200 rounded-full animate-float opacity-60" style={{ animationDelay: '2s' }} />
-            <div className="absolute right-1/4 bottom-1/3 w-20 h-20 bg-mairie-300/50 rounded-full animate-pulse-soft" />
+            {/* Animation elements with faster animation */}
+            <div className="absolute -right-16 top-1/4 w-32 h-32 bg-mairie-50 rounded-full animate-float opacity-80" style={{ animationDuration: '5s' }} />
+            <div className="absolute -left-12 bottom-1/4 w-24 h-24 bg-mairie-100 rounded-full animate-float opacity-80" style={{ animationDuration: '4s', animationDelay: '0.5s' }} />
+            <div className="absolute left-1/4 top-1/3 w-16 h-16 bg-mairie-200 rounded-full animate-float opacity-60" style={{ animationDuration: '4s', animationDelay: '1s' }} />
+            <div className="absolute right-1/4 bottom-1/3 w-20 h-20 bg-mairie-300/50 rounded-full animate-pulse" style={{ animationDuration: '3s' }} />
           </motion.div>
         </div>
       </div>

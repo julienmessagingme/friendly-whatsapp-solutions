@@ -130,7 +130,22 @@
     /* Ensuring 9:20 aspect ratio for 6.5" phone */
     aspect-ratio: 9/20;
     width: 100%;
-    max-width: 196px; /* 30% smaller than original 280px */
+    max-width: 235px; /* Increased by 20% from the previous 196px */
     margin: 0 auto;
+  }
+  
+  /* Added for more responsive animations */
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-pulse {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 }
