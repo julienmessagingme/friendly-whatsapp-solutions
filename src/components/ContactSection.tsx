@@ -28,7 +28,7 @@ const ContactSection = () => {
     
     try {
       // Initialize EmailJS with your user ID
-      emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS User ID
+      emailjs.init("wUm05OeoxUACEqPfu"); // Updated with your EmailJS User ID
       
       const formData = new FormData(e.currentTarget);
       const firstName = formData.get('firstName') as string;
@@ -50,7 +50,7 @@ const ContactSection = () => {
       // Send email using EmailJS
       await emailjs.send(
         'service_qu6psyd', // Updated with your EmailJS Service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS Template ID
+        'template_yr7apo2', // Updated with your EmailJS Template ID
         templateParams
       );
       
