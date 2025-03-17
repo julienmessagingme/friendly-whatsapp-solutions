@@ -1,4 +1,3 @@
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
@@ -16,7 +15,7 @@ const Footer = () => {
               <span className="font-display font-bold" style={{ fontSize: "calc(24px * 0.75)" }}>MairieMe</span>
             </div>
             <p className="text-gray-400 mb-6 text-sm">
-              La solution de communication moderne pour les mairies françaises, permettant d'interagir avec les citoyens via WhatsApp.
+              La solution qui transforme la communication entre les communes et leurs habitants grâce à Whatsapp.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-mairie-700 transition-colors">
