@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -9,43 +9,79 @@ import {
   Phone, 
   Clock, 
   Check,
-  MessageCircle
+  MessageCircle,
+  Loader2
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import emailjs from 'emailjs-com';
+import { useToast } from "@/components/ui/use-toast";
 
 const ContactSection = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+  const { toast } = useToast();
   
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsLoading(true);
     
-    // Get form data
-    const formData = new FormData(e.currentTarget);
-    const firstName = formData.get('firstName');
-    const lastName = formData.get('lastName');
-    const email = formData.get('email');
-    const mairie = formData.get('mairie');
-    const message = formData.get('message');
-    
-    // Create mailto link
-    const subject = encodeURIComponent(`Demande de contact - ${firstName} ${lastName} - ${mairie}`);
-    const body = encodeURIComponent(`
-Prénom: ${firstName}
-Nom: ${lastName}
-Email: ${email}
-Mairie: ${mairie}
-
-Message:
-${message}
-    `);
-    
-    // Open email client with the specified email address
-    window.location.href = `mailto:julien@messagingme.fr?subject=${subject}&body=${body}`;
-    
-    // Show success message
-    setTimeout(() => {
+    try {
+      // Initialize EmailJS with your user ID
+      emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS User ID
+      
+      const formData = new FormData(e.currentTarget);
+      const firstName = formData.get('firstName') as string;
+      const lastName = formData.get('lastName') as string;
+      const email = formData.get('email') as string;
+      const mairie = formData.get('mairie') as string;
+      const message = formData.get('message') as string;
+      
+      // Prepare template parameters
+      const templateParams = {
+        firstName,
+        lastName,
+        email,
+        mairie,
+        message,
+        to_email: 'julien@messagingme.fr'
+      };
+      
+      // Send email using EmailJS
+      await emailjs.send(
+        'YOUR_SERVICE_ID', // Replace with your EmailJS Service ID
+        'YOUR_TEMPLATE_ID', // Replace with your EmailJS Template ID
+        templateParams
+      );
+      
+      // Reset form
+      if (formRef.current) {
+        formRef.current.reset();
+      }
+      
+      // Show success message
       setIsSubmitted(true);
-    }, 500);
+      
+      // Show success toast
+      toast({
+        title: "Message envoyé !",
+        description: "Nous vous répondrons dans les plus brefs délais.",
+        duration: 5000,
+      });
+      
+    } catch (error) {
+      console.error('Error sending email:', error);
+      
+      // Show error toast
+      toast({
+        title: "Erreur",
+        description: "Une erreur est survenue lors de l'envoi du message. Veuillez réessayer.",
+        variant: "destructive",
+        duration: 5000,
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
   
   return (
@@ -137,7 +173,7 @@ ${message}
           >
             <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
               {!isSubmitted ? (
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <label htmlFor="firstName" className="text-sm font-medium text-gray-700">
@@ -149,6 +185,7 @@ ${message}
                         placeholder="Votre prénom" 
                         required 
                         className="rounded-lg"
+                        disabled={isLoading}
                       />
                     </div>
                     <div className="space-y-2">
@@ -161,6 +198,7 @@ ${message}
                         placeholder="Votre nom" 
                         required 
                         className="rounded-lg"
+                        disabled={isLoading}
                       />
                     </div>
                   </div>
@@ -176,6 +214,7 @@ ${message}
                       placeholder="votre@email.fr" 
                       required 
                       className="rounded-lg"
+                      disabled={isLoading}
                     />
                   </div>
                   
@@ -189,6 +228,7 @@ ${message}
                       placeholder="Mairie de..." 
                       required 
                       className="rounded-lg"
+                      disabled={isLoading}
                     />
                   </div>
                   
@@ -202,14 +242,23 @@ ${message}
                       placeholder="Comment pouvons-nous vous aider ?" 
                       rows={4} 
                       className="rounded-lg"
+                      disabled={isLoading}
                     />
                   </div>
                   
                   <Button 
                     type="submit" 
                     className="w-full bg-mairie-600 hover:bg-mairie-700 text-white"
+                    disabled={isLoading}
                   >
-                    Envoyer ma demande
+                    {isLoading ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        Envoi en cours...
+                      </>
+                    ) : (
+                      "Envoyer ma demande"
+                    )}
                   </Button>
                   
                   <p className="text-xs text-gray-500 text-center mt-4">
