@@ -49,7 +49,7 @@ const ContactSection = () => {
       
       // Send email using EmailJS
       await emailjs.send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS Service ID
+        'service_qu6psyd', // Updated with your EmailJS Service ID
         'YOUR_TEMPLATE_ID', // Replace with your EmailJS Template ID
         templateParams
       );
