@@ -12,13 +12,13 @@ const MentionsLegales = () => {
           
           <p className="mb-6">
             Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en l'économie numérique, 
-            il est précisé aux utilisateurs du site Messaging Me l'identité des différents intervenants dans le cadre de sa 
+            il est précisé aux utilisateurs du site MairieMe.org l'identité des différents intervenants dans le cadre de sa 
             réalisation et de son suivi.
           </p>
           
           <h2 className="text-xl font-semibold mb-4 underline">Edition du site</h2>
           <p className="mb-4">
-            Le présent site, accessible à l'URL https://www.messagingme.fr/ (le « Site »), est édité par :
+            Le présent site, accessible à l'URL https://www.mairiemeorg.org/ (le « Site »), est édité par :
           </p>
           <p className="mb-4">
             Messaging Me, société au capital de 3000 euros, inscrite au R.C.S. de PARIS sous le numéro Paris B 948 692 231,

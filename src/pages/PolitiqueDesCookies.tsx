@@ -16,7 +16,7 @@ const PolitiqueDesCookies = () => {
           
           <h2 className="text-xl font-semibold mb-4">1. Introduction</h2>
           <p className="mb-6">
-            Notre site web, https://www.messagingme.fr (ci-après : « le site web ») utilise des cookies et autres technologies 
+            Notre site web, https://www.mairiemeorg.org (ci-après : « le site web ») utilise des cookies et autres technologies 
             liées (par simplification, toutes ces technologies sont désignées par le terme « cookies »). Des cookies sont également 
             placés par des tierces parties que nous avons engagées. Dans le document ci-dessous, nous vous informons de l'utilisation 
             des cookies sur notre site web.
@@ -142,7 +142,7 @@ const PolitiqueDesCookies = () => {
             6 rue d'armaillé<br />
             75017 Paris<br />
             France<br />
-            Site web : https://www.messagingme.fr<br />
+            Site web : https://www.mairiemeorg.org<br />
             E-mail : website@messagingme.fr
           </p>
         </div>

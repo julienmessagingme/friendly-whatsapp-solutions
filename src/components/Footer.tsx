@@ -9,10 +9,10 @@ const Footer = () => {
             <div className="flex items-center space-x-3 mb-6">
               <img 
                 src="/lovable-uploads/c5d9b402-10bb-4e02-bf19-6f563bda581c.png" 
-                alt="MairieMe Logo" 
+                alt="MairieMe.org Logo" 
                 className="h-12 w-auto" 
               />
-              <span className="font-display font-bold" style={{ fontSize: "calc(24px * 0.75)" }}>MairieMe</span>
+              <span className="font-display font-bold" style={{ fontSize: "calc(24px * 0.75)" }}>MairieMe.org</span>
             </div>
             <p className="text-gray-400 mb-6 text-sm">
               La solution qui transforme la communication entre les communes et leurs habitants grâce à Whatsapp.
@@ -74,7 +74,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 text-sm mb-4 md:mb-0">
-            &copy; {currentYear} MairieMe. Tous droits réservés.
+            &copy; {currentYear} MairieMe.org. Tous droits réservés.
           </div>
           <div className="flex space-x-6 text-sm text-gray-400">
             <a href="/politique-de-confidentialite" className="hover:text-white transition-colors">Politique de confidentialité</a>

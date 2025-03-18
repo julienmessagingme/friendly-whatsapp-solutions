@@ -1,4 +1,3 @@
-
 import { Navbar } from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -12,7 +11,7 @@ const PolitiqueDeConfidentialite = () => {
           
           <h2 className="text-xl font-semibold mb-4">Qui sommes-nous ?</h2>
           <p className="mb-6">
-            L'adresse de notre site est : https://www.messagingme.fr
+            L'adresse de notre site est : https://www.mairiemeorg.org
           </p>
           
           <h2 className="text-xl font-semibold mb-4">Commentaires</h2>

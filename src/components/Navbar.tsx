@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -48,11 +47,11 @@ export const Navbar = () => {
           <Link to="/">
             <img 
               src="/lovable-uploads/c5d9b402-10bb-4e02-bf19-6f563bda581c.png" 
-              alt="MairieMe Logo" 
+              alt="MairieMe.org Logo" 
               className="h-10 w-auto" 
             />
           </Link>
-          <Link to="/" className="font-display font-bold text-gray-900 text-2xl md:text-3xl">MairieMe</Link>
+          <Link to="/" className="font-display font-bold text-gray-900 text-2xl md:text-3xl">MairieMe.org</Link>
         </div>
         
         {/* Desktop Navigation */}
